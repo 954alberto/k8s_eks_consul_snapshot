@@ -1,0 +1,19 @@
+[package]
+authors = ["Alberto Rodriguez Garcia <agarcia@schubergphilis.com>"]
+description = "Takes a snapshot from consul and uploads to S3"
+edition = "2018"
+name = "consnap"
+version = "0.2.0"
+
+[dependencies]
+anyhow = "1.0"
+chrono = "0.4"
+clap = "2.33.3"
+curl = {version = "0.4", features = ["static-curl", "static-ssl"]}
+native-tls = {version = "0.2", features = ["vendored"]}
+rusoto_core = "0.45"
+rusoto_credential = "0.45"
+rusoto_s3 = "0.45"
+rusoto_signature = "0.45"
+rusoto_sts = "0.45"
+tokio = {version = "0.2", features = ["full"]}
